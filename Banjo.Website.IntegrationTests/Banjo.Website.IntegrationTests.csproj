@@ -60,9 +60,7 @@
     <Compile Include="Model\NoteTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Database\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\Banjo.Website\Banjo.Website.csproj">
       <Project>{6d1e1dca-b209-4257-89b7-1fdd0715e0bf}</Project>
