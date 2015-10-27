@@ -12,6 +12,5 @@ namespace Banjo.Website.Controllers.Mvc
         {
             return View();
         }
-
     }
 }
