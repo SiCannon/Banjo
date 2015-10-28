@@ -1,25 +1,23 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
+﻿using System.Collections.Generic;
 using System.Web.Http;
+using Banjo.Website.ServiceInterface;
 
 namespace Banjo.Website.Controllers.Api
 {
     [RoutePrefix("api/note")]
     public class NoteController : ApiController
     {
-        [Route("")]
-        public List<string> GetNotes()
-        {
-            return new List<string>
-            {
-                "One",
-                "Two",
-                "Three"
+        INoteService noteService;
 
-            };
+        public NoteController(INoteService noteService)
+        {
+            this.noteService = noteService;
+        }
+
+        [Route("")]
+        public IEnumerable<Banjo.Website.Model.Note> GetNotes()
+        {
+            return noteService.GetNotes();
         }
 
         public List<string> Get(int id)
