@@ -11,6 +11,7 @@ namespace Banjo.Website.App_Start
     using Ninject.Web.Common;
     using Ninject.WebApi.DependencyResolver;
     using Ninject.Extensions.Conventions;
+    using AutoMapper;
 
     public static class NinjectWebCommon 
     {
@@ -70,6 +71,7 @@ namespace Banjo.Website.App_Start
                  .SelectAllClasses() // Retrieve all non-abstract classes
                  .BindDefaultInterface(); // Binds the default interface to them;
             });
-        }        
+            kernel.Bind<IMappingEngine>().ToConstant(Mapper.Engine);
+        }
     }
 }
