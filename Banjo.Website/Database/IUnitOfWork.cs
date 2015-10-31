@@ -3,7 +3,7 @@ using Banjo.Website.Model;
 
 namespace Banjo.Website.Database
 {
-    interface IUnitOfWork
+    public interface IUnitOfWork
     {
         IDbSet<Node> Nodes { get; }
     }

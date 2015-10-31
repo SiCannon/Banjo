@@ -26,19 +26,5 @@ namespace Banjo.Website.Controllers.Api
             var dto = mapper.Map<IEnumerable<NodeDto>>(notes);
             return dto;
         }
-
-        public List<string> Get(int id)
-        {
-            return new List<string>
-            {
-                "one"
-            };
-        }
-
-        [HttpGet]
-        public string Farts()
-        {
-            return "custard";
-        }
     }
 }
