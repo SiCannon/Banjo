@@ -5,7 +5,7 @@ namespace Banjo.Website.Database
 {
     public class BanjoContext : DbContext
     {
-        public DbSet<Note> Notes { get; set; }
+        public DbSet<Node> Nodes { get; set; }
 
         static BanjoContext()
         {

@@ -23,23 +23,23 @@ namespace Banjo.Website.Database
     {
         public static void Populate(BanjoContext db)
         {
-            db.Notes.Add(new Note
+            db.Nodes.Add(new Node
             {
                 Text = "Work"
             });
-            db.Notes.Add(new Note
+            db.Nodes.Add(new Node
             {
                 Text = "Films"
             });
-            db.Notes.Add(new Note
+            db.Nodes.Add(new Node
             {
                 Text = "Flat"
             });
-            db.Notes.Add(new Note
+            db.Nodes.Add(new Node
             {
                 Text = "Company"
             });
-            db.Notes.Add(new Note
+            db.Nodes.Add(new Node
             {
                 Text = "Holiday"
             });

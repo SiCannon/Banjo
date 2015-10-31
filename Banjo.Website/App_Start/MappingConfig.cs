@@ -8,7 +8,7 @@ namespace Banjo.Website
     {
         public static void Initialize()
         {
-            Mapper.CreateMap<Note, NoteDto>();
+            Mapper.CreateMap<Node, NodeDto>();
         }
     }
 }

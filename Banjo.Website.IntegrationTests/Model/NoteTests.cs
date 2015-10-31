@@ -10,21 +10,21 @@ namespace Banjo.Website.IntegrationTests.Model
     public class NoteTests
     {
         [TestMethod]
-        public void Can_Save_Note()
+        public void Can_Save_Node()
         {
-            var note = new Note { Text = "Test Note " + DateTime.Now.ToString() };
+            var node = new Node { Text = "Test Note " + DateTime.Now.ToString() };
             using (var db = new BanjoContext())
             {
-                db.Notes.Add(note);
+                db.Nodes.Add(node);
                 db.SaveChanges();
-                Assert.IsNotNull(note.NoteId);
-                Assert.AreNotEqual(0, note.NoteId);
+                Assert.IsNotNull(node.NodeId);
+                Assert.AreNotEqual(0, node.NodeId);
             }
 
             using (var db = new BanjoContext())
             {
-                var savedNote = db.Notes.SingleOrDefault(x => x.NoteId == note.NoteId);
-                Assert.IsNotNull(savedNote);
+                var savedNode = db.Nodes.SingleOrDefault(x => x.NodeId == node.NodeId);
+                Assert.IsNotNull(savedNode);
             }
         }
 

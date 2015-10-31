@@ -3,8 +3,8 @@ using Banjo.Website.Model;
 
 namespace Banjo.Website.ServiceInterface
 {
-    public interface INoteService
+    public interface INodeService
     {
-        IEnumerable<Note> GetNotes();
+        IEnumerable<Node> GetNodes();
     }
 }

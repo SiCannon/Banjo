@@ -5,6 +5,6 @@ namespace Banjo.Website.Database
 {
     interface IUnitOfWork
     {
-        IDbSet<Note> Notes { get; }
+        IDbSet<Node> Nodes { get; }
     }
 }

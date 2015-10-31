@@ -1,8 +1,8 @@
 ﻿namespace Banjo.Website.Model
 {
-    public class Note
+    public class Node
     {
-        public int? NoteId { get; set; }
+        public int? NodeId { get; set; }
         public string Text { get; set; }
     }
 }

@@ -6,14 +6,12 @@ namespace Banjo.Website
     {
         public static void RegisterBundles(BundleCollection bundles)
         {
-            bundles.Add(new ScriptBundle("~/bundles/common").Include(
-                        "~/Scripts/jquery-{version}.js",
-                        "~/Scripts/bootstrap.js"
-                        ));
+            bundles.Add(new ScriptBundle("~/bundles/angular-lib")
+                .Include("~/Scripts/angular.js"));
 
-            bundles.Add(new ScriptBundle("~/bundles/angular-lib").Include(
-                        "~/Scripts/angular.js"
-                        ));
+            bundles.Add(new ScriptBundle("~/bundles/angular-banjo")
+                .Include("~/JsBanjo/Modules/BanjoApp.js")
+                .IncludeDirectory("~/JsBanjo", "*.js", true));
         }
     }
 }

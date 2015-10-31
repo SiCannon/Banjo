@@ -5,7 +5,7 @@ namespace Banjo.Website.Database
 {
     public class UnitOfWork : IUnitOfWork
     {
-        public IDbSet<Note> Notes { get { return db.Notes; } }
+        public IDbSet<Node> Nodes { get { return db.Nodes; } }
 
         public UnitOfWork()
         {

@@ -158,26 +158,29 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\MappingConfig.cs" />
     <Compile Include="App_Start\NinjectWebCommon.cs" />
-    <Compile Include="Controllers\Api\NoteController.cs" />
+    <Compile Include="Controllers\Api\NodeController.cs" />
     <Compile Include="Controllers\Mvc\HomeController.cs" />
     <Compile Include="Database\BanjoContext.cs" />
     <Compile Include="Database\BanjoDatabaseInitializer.cs" />
     <Compile Include="Database\IUnitOfWork.cs" />
     <Compile Include="Database\UnitOfWork.cs" />
-    <Compile Include="Dto\NoteDto.cs" />
+    <Compile Include="Dto\NodeDto.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Model\Note.cs" />
+    <Compile Include="Model\Node.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ServiceInterface\INoteService.cs" />
-    <Compile Include="Service\NoteService.cs" />
+    <Compile Include="ServiceInterface\INodeService.cs" />
+    <Compile Include="Service\NodeService.cs" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Content Include="Global.asax" />
+    <Content Include="JsBanjo\Controllers\NodeController.js" />
+    <Content Include="JsBanjo\Modules\BanjoApp.js" />
+    <Content Include="JsBanjo\Services\NodeService.js" />
     <Content Include="Scripts\angular-mocks.js" />
     <Content Include="Scripts\angular.js" />
     <Content Include="Scripts\angular.min.js" />
@@ -202,9 +205,7 @@
   <ItemGroup>
     <Content Include="Views\_ViewStart.cshtml" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Mapping\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="Scripts\angular.min.js.map" />
   </ItemGroup>
