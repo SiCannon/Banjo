@@ -19,11 +19,27 @@ namespace Banjo.Website.Controllers.Api
             this.noteService = noteService;
         }
 
-        [Route("")]
-        public IEnumerable<NodeDto> GetNotes()
+        [Route("all")]
+        public IEnumerable<NodeDto> GetAllNodes()
         {
-            var notes = noteService.GetNodes().ToList();
-            var dto = mapper.Map<IEnumerable<NodeDto>>(notes);
+            var nodes = noteService.GetAllNodes().ToList();
+            var dto = mapper.Map<IEnumerable<NodeDto>>(nodes);
+            return dto;
+        }
+
+        [Route("root")]
+        public IEnumerable<NodeDto> GetRootNodes()
+        {
+            var nodes = noteService.GetRootNodes().ToList();
+            var dto = mapper.Map<IEnumerable<NodeDto>>(nodes);
+            return dto;
+        }
+
+        [Route("{id:int}/children")]
+        public IEnumerable<NodeDto> GetChildNodes(int id)
+        {
+            var nodes = noteService.GetChildNodes(id).ToList();
+            var dto = mapper.Map<IEnumerable<NodeDto>>(nodes);
             return dto;
         }
     }

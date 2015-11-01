@@ -1,10 +1,12 @@
 ﻿@Scripts.Render("~/bundles/angular-lib")
 @Scripts.Render("~/bundles/angular-banjo")
 
+<h3>Banjo</h3>
+
 <div ng-app="BanjoApp">
     <div ng-controller="NodeController">
         <ul>
-            <li ng-repeat="node in nodes">
+            <li ng-repeat="node in nodes" ng-click="">
                 {{node.Text}}
             </li>
         </ul>
