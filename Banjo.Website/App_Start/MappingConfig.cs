@@ -9,6 +9,8 @@ namespace Banjo.Website
         public static void Initialize()
         {
             Mapper.CreateMap<Node, NodeDto>();
+
+            Mapper.AssertConfigurationIsValid();
         }
     }
 }

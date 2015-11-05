@@ -6,8 +6,13 @@
 <div ng-app="BanjoApp">
     <div ng-controller="NodeController">
         <ul>
-            <li ng-repeat="node in nodes" ng-click="">
+            <li ng-repeat="node in nodes" ng-click="expand(node)">
                 {{node.Text}}
+                <ul>
+                    <li ng-repeat="n in node.children">
+                        child: {{n.Text}}
+                    </li>
+                </ul>
             </li>
         </ul>
     </div>

@@ -2,9 +2,10 @@
     .controller("NodeController", ["$scope", "NodeService",
         function ($scope, NodeService) {
 
-            NodeService.all(function (data) { $scope.nodes = data; });
+            NodeService.root(function (data) { $scope.nodes = data; });
 
-            $scope.expand = function () {
+            $scope.expand = function (node) {
+                NodeService.children(node.NodeId, function (data) { node.children = data; });
             }
 
         }]);

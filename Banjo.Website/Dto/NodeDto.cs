@@ -2,7 +2,7 @@
 {
     public class NodeDto
     {
-        public int? NoteId { get; set; }
+        public int? NodeId { get; set; }
         public string Text { get; set; }
     }
 }
