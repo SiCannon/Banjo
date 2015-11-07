@@ -7,7 +7,8 @@ namespace Banjo.Website
         public static void RegisterBundles(BundleCollection bundles)
         {
             bundles.Add(new ScriptBundle("~/bundles/angular-lib")
-                .Include("~/Scripts/angular.js"));
+                .Include("~/Scripts/angular.js")
+                .IncludeDirectory("~/JsSc", "*.js", true));
 
             bundles.Add(new ScriptBundle("~/bundles/angular-banjo")
                 .Include("~/JsBanjo/Modules/BanjoApp.js")

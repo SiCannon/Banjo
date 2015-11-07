@@ -177,8 +177,11 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Content Include="Global.asax" />
     <Content Include="JsBanjo\Controllers\NodeController.js" />
+    <Content Include="JsBanjo\Directives\Node.html" />
+    <Content Include="JsBanjo\Directives\Node.js" />
     <Content Include="JsBanjo\Modules\BanjoApp.js" />
     <Content Include="JsBanjo\Services\NodeService.js" />
+    <Content Include="JsSc\Helpers\RecursionHelper.js" />
     <Content Include="Scripts\angular-mocks.js" />
     <Content Include="Scripts\angular.js" />
     <Content Include="Scripts\angular.min.js" />
