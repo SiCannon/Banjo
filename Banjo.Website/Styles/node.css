@@ -1,0 +1,10 @@
+﻿.node .text {
+    border: 1px solid #aaa;
+    cursor: pointer;
+    display: inline-block;
+}
+
+node {
+    display: inline-block;
+    background-color: pink;
+}

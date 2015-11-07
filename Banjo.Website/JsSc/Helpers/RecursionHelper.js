@@ -1,4 +1,4 @@
-﻿angular.module("BanjoApp")
+﻿angular.module("ScModule")
     .factory('RecursionHelper', ['$compile', function ($compile) {
     return {
         /**

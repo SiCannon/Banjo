@@ -1,3 +1,11 @@
 ﻿<div class="node">
-    {{
+    <div class="text" ng-click="toggle()">{{data.Text}}</div>
+    <div ng-if="isExpanded">
+        <ul>
+            <li ng-repeat="node in data.Children">
+                <node data="node">
+                </node>
+            </li>
+        </ul>
+    </div>
 </div>

@@ -182,9 +182,11 @@
     <Content Include="JsBanjo\Modules\BanjoApp.js" />
     <Content Include="JsBanjo\Services\NodeService.js" />
     <Content Include="JsSc\Helpers\RecursionHelper.js" />
+    <Content Include="JsSc\Modules\ScModule.js" />
     <Content Include="Scripts\angular-mocks.js" />
     <Content Include="Scripts\angular.js" />
     <Content Include="Scripts\angular.min.js" />
+    <Content Include="Styles\node.css" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
