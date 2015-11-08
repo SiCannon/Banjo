@@ -1,6 +1,6 @@
 ﻿angular.module("BanjoApp")
-    .directive("node", ["RecursionHelper",
-        function (RecursionHelper) {
+    .directive("node", ["RecursionHelper", "NodeService",
+        function (RecursionHelper, NodeService) {
 
             return {
                 restrict: "E",
@@ -19,6 +19,9 @@
 
                         scope.toggle = function () {
                             scope.isExpanded = !scope.isExpanded;
+                            if (scope.isExpanded) {
+                                NodeService.getChildren(scope.data.NodeId, function (data) { scope.data.Children = data; });
+                            }
                         }
 
                     });

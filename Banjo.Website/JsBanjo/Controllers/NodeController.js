@@ -2,13 +2,13 @@
     .controller("NodeController", ["$scope", "NodeService",
         function ($scope, NodeService) {
 
-            //NodeService.root(function (data) { $scope.nodes = data; });
+            NodeService.getRoot(function (data) { $scope.root = data; });
 
             //$scope.expand = function (node) {
             //    NodeService.children(node.NodeId, function (data) { node.children = data; });
             //}
 
-            $scope.root = {
+            /*$scope.root = {
                 Text: "Root",
                 Children: [
                     {
@@ -33,6 +33,6 @@
                         Children: []
                     }
                 ]
-            };
+            };*/
 
         }]);

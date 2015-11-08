@@ -13,9 +13,9 @@ namespace Banjo.Website.Service
         {
         }
 
-        public IEnumerable<Node> GetRootNodes()
+        public Node GetRootNode()
         {
-            return database.Nodes.Where(x => x.ParentNodeId == null);
+            return database.Nodes.SingleOrDefault(x => x.ParentNodeId == null);
         }
 
         public IEnumerable<Node> GetChildNodes(int parentNodeId)

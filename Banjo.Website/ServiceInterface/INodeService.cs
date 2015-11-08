@@ -6,7 +6,7 @@ namespace Banjo.Website.ServiceInterface
 {
     public interface INodeService : IGenericService<Node>
     {
-        IEnumerable<Node> GetRootNodes();
+        Node GetRootNode();
         IEnumerable<Node> GetChildNodes(int parentNodeId);
     }
 }

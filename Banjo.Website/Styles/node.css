@@ -4,7 +4,7 @@
     display: inline-block;
 }
 
-node {
+.node {
     display: inline-block;
-    background-color: pink;
+    margin-left: 20px;
 }

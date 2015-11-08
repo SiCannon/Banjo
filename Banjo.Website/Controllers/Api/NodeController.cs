@@ -28,10 +28,10 @@ namespace Banjo.Website.Controllers.Api
         }
 
         [Route("root")]
-        public IEnumerable<NodeDto> GetRootNodes()
+        public NodeDto GetRootNode()
         {
-            var nodes = nodeService.GetRootNodes().ToList();
-            var dto = mapper.Map<IEnumerable<NodeDto>>(nodes);
+            var nodes = nodeService.GetRootNode();
+            var dto = mapper.Map<NodeDto>(nodes);
             return dto;
         }
 

@@ -24,14 +24,16 @@ namespace Banjo.Website.Database
         public static void Populate(BanjoContext db)
         {
             var root = new Node { Text = "Root" };
-            var child1 = new Node { Text = "One", ParentNode = root };
-            var child2 = new Node { Text = "Two", ParentNode = root };
-            var child3 = new Node { Text = "Three", ParentNode = root };
+            var work = new Node { Text = "Work", ParentNode = root };
+            var flat = new Node { Text = "Flat", ParentNode = root };
+            var letting = new Node { Text = "Letting", ParentNode = flat };
+            var company = new Node { Text = "Company", ParentNode = root };
 
             db.Nodes.Add(root);
-            db.Nodes.Add(child1);
-            db.Nodes.Add(child2);
-            db.Nodes.Add(child3);
+            db.Nodes.Add(work);
+            db.Nodes.Add(flat);
+            db.Nodes.Add(letting);
+            db.Nodes.Add(company);
 
             /*db.Nodes.Add(new Node { Text = "Work" });
             db.Nodes.Add(new Node { Text = "Films" });
