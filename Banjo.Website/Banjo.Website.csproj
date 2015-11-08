@@ -159,16 +159,17 @@
     <Compile Include="Database\BanjoContext.cs" />
     <Compile Include="Database\BanjoDatabaseInitializer.cs" />
     <Compile Include="Database\Config\NodeConfig.cs" />
-    <Compile Include="Database\IUnitOfWork.cs" />
-    <Compile Include="Database\UnitOfWork.cs" />
+    <Compile Include="Database\IBanjoContext.cs" />
     <Compile Include="Dto\NodeDto.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Model\Node.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ServiceBase\GenericService.cs" />
+    <Compile Include="ServiceBase\IGenericService.cs" />
     <Compile Include="ServiceInterface\INodeService.cs" />
-    <Compile Include="Service\BaseService.cs" />
+    <Compile Include="ServiceBase\BaseService.cs" />
     <Compile Include="Service\NodeService.cs" />
   </ItemGroup>
   <ItemGroup>

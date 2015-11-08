@@ -11,18 +11,18 @@ namespace Banjo.Website.Controllers.Api
     public class NodeController : ApiController
     {
         IMappingEngine mapper;
-        INodeService noteService;
+        INodeService nodeService;
 
         public NodeController(IMappingEngine mapper, INodeService noteService)
         {
             this.mapper = mapper;
-            this.noteService = noteService;
+            this.nodeService = noteService;
         }
 
         [Route("all")]
         public IEnumerable<NodeDto> GetAllNodes()
         {
-            var nodes = noteService.GetAllNodes().ToList();
+            var nodes = nodeService.GetAll().ToList();
             var dto = mapper.Map<IEnumerable<NodeDto>>(nodes);
             return dto;
         }
@@ -30,7 +30,7 @@ namespace Banjo.Website.Controllers.Api
         [Route("root")]
         public IEnumerable<NodeDto> GetRootNodes()
         {
-            var nodes = noteService.GetRootNodes().ToList();
+            var nodes = nodeService.GetRootNodes().ToList();
             var dto = mapper.Map<IEnumerable<NodeDto>>(nodes);
             return dto;
         }
@@ -38,7 +38,7 @@ namespace Banjo.Website.Controllers.Api
         [Route("{id:int}/children")]
         public IEnumerable<NodeDto> GetChildNodes(int id)
         {
-            var nodes = noteService.GetChildNodes(id).ToList();
+            var nodes = nodeService.GetChildNodes(id).ToList();
             var dto = mapper.Map<IEnumerable<NodeDto>>(nodes);
             return dto;
         }
