@@ -1,5 +1,6 @@
 ﻿@Scripts.Render("~/bundles/angular-lib")
 @Scripts.Render("~/bundles/angular-banjo")
+@Styles.Render("~/bundles/font-awesome")
 @Styles.Render("~/bundles/less")
 
 <h3>Banjo</h3>
@@ -7,16 +8,5 @@
 <div ng-app="BanjoApp">
     <div ng-controller="NodeController">
         <node data="root"></node>
-        @*<hl/>
-        <ul>
-            <li ng-repeat="node in nodes" ng-click="expand(node)">
-                {{node.Text}}
-                <ul>
-                    <li ng-repeat="n in node.children">
-                        child: {{n.Text}}
-                    </li>
-                </ul>
-            </li>
-        </ul>*@
     </div>
 </div>

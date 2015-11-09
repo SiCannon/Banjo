@@ -15,6 +15,12 @@ namespace Banjo.Website
                 .Include("~/JsBanjo/Modules/BanjoApp.js")
                 .IncludeDirectory("~/JsBanjo", "*.js", true));
 
+            var fa = new Bundle("~/bundles/font-awesome")
+                .Include("~/Styles/font-awesome/font-awesome.less");
+            fa.Transforms.Add(new LessTransform("~/Styles/font-awesome"));
+            fa.Transforms.Add(new CssMinify());
+            bundles.Add(fa);
+
             var less = new Bundle("~/bundles/less").Include("~/Styles/node.less");
             less.Transforms.Add(new LessTransform("~/Styles"));
             less.Transforms.Add(new CssMinify());

@@ -11,6 +11,7 @@ namespace Banjo.Website.Service
     {
         public NodeService(IBanjoContext database) : base(database)
         {
+
         }
 
         public Node GetRootNode()
