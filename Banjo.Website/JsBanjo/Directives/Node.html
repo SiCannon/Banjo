@@ -1,5 +1,7 @@
 ﻿<div class="node">
-    <div class="text" ng-click="toggle()"><i class="fa fa-plus-square"></i> {{data.Text}}</div>
+    <div class="text" ng-click="toggle()">
+        <i class="fa expand"></i> {{data.Text}} <i class="fa add"></i>
+    </div>
     <div ng-if="isExpanded" ng-repeat="node in data.Children">
         <node data="node">
         </node>
