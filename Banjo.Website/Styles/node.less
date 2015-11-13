@@ -1,16 +1,32 @@
 ﻿@import (reference) "font-awesome/font-awesome.less";
 
 .node {
-    i.expand:before{
-        content: @fa-var-plus-square;
+    i {
+        font-size: 0.9em;
     }
-    i.add:before {
-        content: @fa-var-plus-circle;
+    i.expand:before {
+        content: @fa-var-plus-square-o;
+    }
+    i.collapse:before {
+        content: @fa-var-minus-square-o;
+    }
+    i.leaf:before {
+        content: @fa-var-play;
+    }
+    i.add {
+        color: #aaa;
+        &:before {
+            content: @fa-var-plus-circle;
+        }
     }
 }
+
 .node .text {
     cursor: pointer;
     display: inline-block;
+    &:hover {
+        background-color: #ccc;
+    }
 }
 
 .node {

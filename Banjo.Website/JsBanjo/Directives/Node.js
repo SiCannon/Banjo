@@ -24,6 +24,12 @@
                             }
                         }
 
+                        scope.getExpanderClass = function () {
+                            return scope.isExpanded ? "collapse"
+                                : scope.data.HasChildren ? "expand"
+                                : "leaf";
+                        }
+
                     });
                 }
 

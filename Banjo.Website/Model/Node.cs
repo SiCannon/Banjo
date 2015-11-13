@@ -9,5 +9,13 @@ namespace Banjo.Website.Model
         public int? ParentNodeId { get; set; }
         public virtual Node ParentNode { get; set; }
         public virtual ICollection<Node> ChildNodes { get; set; }
+
+        public bool HasChildren
+        {
+            get
+            {
+                return ChildNodes.Count > 0;
+            }
+        }
     }
 }

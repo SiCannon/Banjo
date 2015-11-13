@@ -4,5 +4,6 @@
     {
         public int? NodeId { get; set; }
         public string Text { get; set; }
+        public bool HasChildren { get; set; }
     }
 }
